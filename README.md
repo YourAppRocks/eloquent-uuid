@@ -2,6 +2,7 @@
 # Eloquent UUID
 
 [![Software License][ico-license]](LICENSE.md)
+[![Build Status](https://travis-ci.org/YourAppRocks/eloquent-uuid.svg?branch=master)](https://travis-ci.org/YourAppRocks/eloquent-uuid)
 
 Laravel package that adds support for UUID generation automatically for Eloquent Models.
 
