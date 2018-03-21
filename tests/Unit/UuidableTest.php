@@ -27,9 +27,9 @@ class UuidableTest extends TestCase
     public function set_uuid_column_name()
     {
         $model = new UuidableModel;
-        $model->setUuidColumnName('universal_unique_id');
+        $model->setUuidColumnName('universally_unique_id');
 
-        $this->assertEquals('universal_unique_id', $model->getUuidColumnName());
+        $this->assertEquals('universally_unique_id', $model->getUuidColumnName());
     }
 
     /** @test */

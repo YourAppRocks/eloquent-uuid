@@ -17,5 +17,5 @@ class Post extends TestModel
         'title',
     ];
 
-    protected $uuidColumnName = 'universal_unique_id';
+    protected $uuidColumnName = 'universally_unique_id';
 }

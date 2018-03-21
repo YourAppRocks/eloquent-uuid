@@ -75,7 +75,7 @@ class HasUuidTest extends TestCase
         $this->expectException('\YourAppRocks\EloquentUuid\Exceptions\MissingUuidColumnException');
 
         $user = new User();
-        $user->setUuidColumnName('universal_unique_id');
+        $user->setUuidColumnName('universally_unique_id');
         $user->name = 'Dhyogo Almeida';
         $user->save();
     }

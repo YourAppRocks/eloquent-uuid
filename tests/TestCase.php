@@ -44,7 +44,7 @@ class TestCase extends Orchestra
 
         Schema::dropIfExists('posts');
         Schema::create('posts', function (Blueprint $table) {
-            $table->uuid('universal_unique_id');
+            $table->uuid('universally_unique_id');
             $table->string('title')->nullable();
             $table->timestamps();
         });
