@@ -2,7 +2,9 @@
 # Eloquent UUID
 
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status](https://travis-ci.org/YourAppRocks/eloquent-uuid.svg?branch=master)](https://travis-ci.org/YourAppRocks/eloquent-uuid)
+[![Build Status][ico-build]][link-build]
+[![Latest Stable Version][ico-stable]][link-stable]
+[![Total Downloads][ico-downloads]][link-downloads]
 
 Simple and flexible Laravel package that adds support for UUID generation automatically for any Eloquent model.
 
@@ -184,8 +186,15 @@ This package is inspired by [this][link-inspire] package.
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
+[ico-build]: https://travis-ci.org/YourAppRocks/eloquent-uuid.svg?branch=master
+[ico-downloads]: https://poser.pugx.org/your-app-rocks/eloquent-uuid/downloads
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg
+[ico-stable]: https://poser.pugx.org/your-app-rocks/eloquent-uuid/v/stable
 
 [link-author]: https://github.com/joaorobertopb
+[link-build]: https://travis-ci.org/YourAppRocks/eloquent-uuid
 [link-contributors]: ../../contributors
+[link-downloads]: https://packagist.org/packages/your-app-rocks/eloquent-uuid
 [link-inspire]: https://github.com/kblais/laravel-uuid/
+[link-stable]: https://packagist.org/packages/your-app-rocks/eloquent-uuid
+
