@@ -10,5 +10,6 @@
 /.php_cs.dist       export-ignore
 /.travis.yml        export-ignore
 /CONTRIBUTING.md    export-ignore
+/docs               export-ignore
 /phpunit.xml.dist   export-ignore
 /tests              export-ignore

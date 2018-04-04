@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="https://raw.githubusercontent.com/YourAppRocks/eloquent-uuid/master/docs/yourAppRocks-logo.png" alt="YourApp.Rocks logo" >
+</p>
+
 
 # Eloquent UUID
 
