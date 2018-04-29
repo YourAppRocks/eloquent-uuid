@@ -6,8 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2018-04-29
+### Added
+- Add support for the custom key name model binding.  [See Laravel Documentation](https://laravel.com/docs/5.6/routing#route-model-binding)
+
 ## 1.0.0 - 2018-03-25
 ### Added
 - First Release
 
-[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.1.0...HEAD
+
+[1.1.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.0.0...1.1.0
