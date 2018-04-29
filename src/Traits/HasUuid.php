@@ -42,6 +42,16 @@ trait HasUuid
     }
 
     /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return $this->getUuidColumnName();
+    }
+
+    /**
      * Check if the table have a column uuid.
      *
      * @throws MissingUuidColumnException
