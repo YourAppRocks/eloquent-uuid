@@ -36,7 +36,7 @@ or via `composer.json` file
 ```json
 {
     "require": {
-        "your-app-rocks/eloquent-uuid": "package-version"
+        "your-app-rocks/eloquent-uuid": "~1.1"
     }
 }
 ```
