@@ -11,6 +11,7 @@
 
 namespace YourAppRocks\EloquentUuid\Traits;
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use YourAppRocks\EloquentUuid\Exceptions\MissingUuidColumnException;
 
 trait HasUuid
@@ -52,14 +53,50 @@ trait HasUuid
     }
 
     /**
+     * Scope query by UUID.
+     *
+     * @param  string $uuid
+     * @param  bool $firstOrFail
+     * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Builder
+     *
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+     */
+    public function scopeFindByUuid($query, $uuid, $firstOrFail = true)
+    {
+        $this->validateUuid($uuid);
+
+        $queryBuilder = $query->where($this->getUuidColumnName(), $uuid);
+
+        return $firstOrFail ? $queryBuilder->firstOrFail() : $queryBuilder;
+    }
+
+    /**
      * Check if the table have a column uuid.
      *
-     * @throws MissingUuidColumnException
+     * @param \Illuminate\Database\Eloquent\Model
+     * @return void
+     *
+     * @throws \YourAppRocks\EloquentUuid\Exceptions\MissingUuidColumnException
      */
     private function hasColumnUuid($model)
     {
         if (! \Schema::hasColumn($model->getTable(), $model->getUuidColumnName())) {
             throw new MissingUuidColumnException("You don't have a '{$model->getUuidColumnName()}' column on '{$model->getTable()}' table.");
+        }
+    }
+
+    /**
+     * Check if uuid value is valid.
+     *
+     * @param  string $uuid
+     * @return void
+     *
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+     */
+    private function validateUuid($uuid)
+    {
+        if (! \Ramsey\Uuid\Uuid::isValid($uuid)) {
+            throw (new ModelNotFoundException)->setModel(get_class($this));
         }
     }
 }

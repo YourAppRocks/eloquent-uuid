@@ -70,6 +70,25 @@ class HasUuidTest extends TestCase
     }
 
     /** @test */
+    public function find_a_model_by_its_uuid()
+    {
+        $user = User::create(['name' => 'Taylor']);
+        $taylor = User::findByUuid($user->getUuid());
+
+        $this->assertInstanceOf(User::class, $taylor);
+        $this->assertSame('Taylor', $taylor->name);
+    }
+
+    /** @test */
+    public function find_a_model_by_its_uuid_and_return_query_builder()
+    {
+        $user = User::create(['name' => 'Taylor']);
+        $query = User::findByUuid($user->getUuid(), false);
+
+        $this->assertInstanceOf(\Illuminate\Database\Eloquent\Builder::class, $query);
+    }
+
+    /** @test */
     public function expected_missing_uuid_column_exception()
     {
         $this->expectException('\YourAppRocks\EloquentUuid\Exceptions\MissingUuidColumnException');
@@ -78,5 +97,14 @@ class HasUuidTest extends TestCase
         $user->setUuidColumnName('universally_unique_id');
         $user->name = 'Dhyogo Almeida';
         $user->save();
+    }
+
+    /** @test */
+    public function expected_model_not_found_exception()
+    {
+        $this->expectException('\Illuminate\Database\Eloquent\ModelNotFoundException');
+
+        $user = User::create(['name' => 'João']);
+        $joao = User::findByUuid(strtoupper($user->getUuid()));
     }
 }
