@@ -71,8 +71,55 @@ class User extends Model
     use HasUuid;
 }
 ```
+### Create Controller
 
-**Ready!** When a new record is inserted into the table `(with the create() and save() methods)`, Trait **HasUuid** will automatically generate a *uuid version 4* for the 'uuid' column of your schema.
+```php
+<?php
+
+namespace App\YourNameSpace;
+
+use App\YourNameSpace\User;
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+
+    /**
+     * When a new record is inserted into the table `(with the create() or save() methods)`,
+     * Trait "HasUuid" will automatically generate a uuid version 4* for the 'uuid' column of your schema.
+     */
+    public function store(Request $request)
+    {
+        $user = User::create($request->all()); // Automatically generate a uuid
+
+        return $user->getUuid() // Return UUID value.
+    }
+
+    /**
+     * Get User by custom 'UUID' key name - Implicit Binding.
+     * See https://laravel.com/docs/5.6/routing#route-model-binding
+     *
+     * @param User $user
+     * @return void
+     */
+    public function show(User $user)
+    {
+        return $user;
+    }
+
+    //OR
+
+    /**
+     * Get User by scope query.
+     */
+    public function show($uuid)
+    {
+        $user = User::findByUuid($uuid);
+
+        return $user;
+    }
+}
+```
 
 ## Customization
 
