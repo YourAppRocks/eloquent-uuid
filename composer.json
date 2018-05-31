@@ -37,6 +37,7 @@
     },
     "scripts": {
         "test": "phpunit",
+        "check-style": "php-cs-fixer fix --using-cache=no --diff --dry-run .",
         "fix-style": "php-cs-fixer --using-cache=no fix ."
     },
     "config": {
