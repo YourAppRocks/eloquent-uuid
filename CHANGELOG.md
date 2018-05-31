@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [1.2.1] - 2018-05-31
+### Added
+- Add 'check-style' composer script.
+
 ## [1.2.0] - 2018-04-30
 ### Added
 - Add 'findByUuid()' scope query.
@@ -18,7 +22,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - First Release
 
-[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.0...HEAD
+[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.1...HEAD
 
-[1.1.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.0.0...1.1.0
+[1.2.1]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.1.0...1.2.0
+[1.1.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.0.0...1.1.0
