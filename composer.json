@@ -18,12 +18,12 @@
     ],
     "require": {
         "php": "^7.1",
-        "ramsey/uuid": "^3.7.1"
+        "ramsey/uuid": "^3.8"
     },
     "require-dev": {
-        "orchestra/testbench": "^3.5|^3.6",
-        "phpunit/phpunit": "^6.0|^7.0",
-        "friendsofphp/php-cs-fixer": "^2.10"
+        "orchestra/testbench": "^3.5|^3.6|^3.7",
+        "phpunit/phpunit": "^6.0|^7.0|^8.0",
+        "friendsofphp/php-cs-fixer": "^2.14"
     },
     "autoload": {
         "psr-4": {
