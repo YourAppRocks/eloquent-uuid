@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [1.2.2] - 2019-02-13
+### Added
+- Tests against PHP 7.3
+
+### Updated
+- Updated dependencies
+
 ## [1.2.1] - 2018-05-31
 ### Added
 - Add 'check-style' composer script.
@@ -16,14 +23,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [1.1.0] - 2018-04-29
 ### Added
-- Add support for the custom key name model binding.  [See Laravel Documentation](https://laravel.com/docs/5.6/routing#route-model-binding)
+- Add support for the custom key name model binding.  [See Laravel Documentation](https://laravel.com/docs/5.7/routing#route-model-binding)
 
 ## 1.0.0 - 2018-03-25
 ### Added
 - First Release
 
-[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.1...HEAD
+[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.2...HEAD
 
+[1.2.2]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.0.0...1.1.0
