@@ -8,7 +8,7 @@
         "eloquent-uuid",
         "universal unique id"
     ],
-    "homepage": "http://yourapp.rocks",
+    "homepage": "https://yourapp.rocks",
     "license": "MIT",
     "authors": [
         {
@@ -21,7 +21,7 @@
         "ramsey/uuid": "^3.8"
     },
     "require-dev": {
-        "orchestra/testbench": "^3.5|^3.6|^3.7",
+        "orchestra/testbench": ">=3.5 <3.8",
         "phpunit/phpunit": "^6.0|^7.0|^8.0",
         "friendsofphp/php-cs-fixer": "^2.14"
     },
@@ -39,6 +39,11 @@
         "test": "phpunit",
         "check-style": "php-cs-fixer fix --using-cache=no --diff --dry-run .",
         "fix-style": "php-cs-fixer --using-cache=no fix ."
+    },
+    "scripts-descriptions": {
+        "test": "Run all tests.",
+        "check-style": "Run style checks (only dry run - no fixing!).",
+        "fix-style": "Run style checks and fix violations."
     },
     "config": {
         "sort-packages": true
