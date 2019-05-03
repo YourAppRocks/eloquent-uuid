@@ -11,8 +11,13 @@
 
 namespace YourAppRocks\EloquentUuid\Tests\Fixtures;
 
-class User extends TestModel
+use Illuminate\Database\Eloquent\Model;
+use YourAppRocks\EloquentUuid\Traits\HasUuid;
+
+class User extends Model
 {
+    use HasUuid;
+    
     protected $fillable = [
         'name',
     ];
