@@ -76,6 +76,7 @@ trait Uuidable
      * Generate the UUID.
      *
      * @return string
+     * @throws InvalidUuidVersionException
      */
     public function generateUuid()
     {
@@ -89,20 +90,20 @@ trait Uuidable
             case 5:
                 return RamseyUuid::uuid5(RamseyUuid::NAMESPACE_DNS, $this->getUuidString())->toString();
             default:
-                throw new InvalidArgumentException;
+                throw new InvalidUuidVersionException;
         }
     }
 
     /**
-     * Validate set uuid version.
+     * Validate uuid version.
      *
      * @throws InvalidUuidVersionException
      */
-    private function validateUuidVersion($value)
+    public function validateUuidVersion($value)
     {
         $validValues = [1, 3, 4, 5];
 
-        if (! in_array($value, $validValues) or ! is_numeric($value)) {
+        if (! in_array($value, $validValues)) {
             throw new InvalidUuidVersionException();
         }
     }
