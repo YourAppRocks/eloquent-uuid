@@ -42,10 +42,10 @@ class TestCase extends Orchestra
             $table->timestamps();
         });
 
-        Schema::dropIfExists('posts');
-        Schema::create('posts', function (Blueprint $table) {
-            $table->uuid('universally_unique_id');
-            $table->string('title')->nullable();
+        Schema::dropIfExists('custom_users');
+        Schema::create('custom_users', function (Blueprint $table) {
+            $table->uuid('userid');
+            $table->string('name')->nullable();
             $table->timestamps();
         });
     }

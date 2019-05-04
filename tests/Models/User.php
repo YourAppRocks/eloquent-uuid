@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace YourAppRocks\EloquentUuid\Tests\Fixtures;
+namespace YourAppRocks\EloquentUuid\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use YourAppRocks\EloquentUuid\Traits\HasUuid;
@@ -17,7 +17,7 @@ use YourAppRocks\EloquentUuid\Traits\HasUuid;
 class User extends Model
 {
     use HasUuid;
-    
+
     protected $fillable = [
         'name',
     ];

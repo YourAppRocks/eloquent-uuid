@@ -14,7 +14,7 @@ namespace YourAppRocks\EloquentUuid\Test\Feature;
 use YourAppRocks\EloquentUuid\Tests\TestCase;
 use YourAppRocks\EloquentUuid\Tests\Models\User;
 
-class HasUuidTest extends TestCase
+class UserHasUuidTest extends TestCase
 {
     /** @test */
     public function it_generates_the_uuid_on_create()
@@ -27,7 +27,7 @@ class HasUuidTest extends TestCase
     public function it_generates_the_uuid_on_save()
     {
         $user = new User();
-        $user->name = 'Fausto Mastrella';
+        $user->name = 'João Roberto';
         $this->assertEmpty($user->getUuid());
 
         $user->save();
@@ -39,7 +39,7 @@ class HasUuidTest extends TestCase
     {
         $randomUuid = '44bdab3b-1da5-45ac-b7ca-468878cea619';
 
-        $user = User::create(['name' => 'Vinícius Mello']);
+        $user = User::create(['name' => 'João Roberto']);
         $this->assertNotEmpty($user->getUuid());
 
         //Override Uuid
@@ -71,9 +71,27 @@ class HasUuidTest extends TestCase
     /** @test */
     public function expected_model_not_found_exception()
     {
-        $this->expectException('\Illuminate\Database\Eloquent\ModelNotFoundException');
+        $this->expectException(\Illuminate\Database\Eloquent\ModelNotFoundException::class);
 
         $user = User::create(['name' => 'João']);
         $joao = User::findByUuid(strtoupper($user->getUuid()));
+    }
+
+    /** @test */
+    public function get_default_uuid_column_name()
+    {
+        $this->assertEquals('uuid', (new User)->getUuidColumnName());
+    }
+
+    /** @test */
+    public function get_default_uuid_version()
+    {
+        $this->assertEquals(4, (new User)->getUuidVersion());
+    }
+
+    /** @test */
+    public function get_uuid_string()
+    {
+        $this->assertEquals('', (new User)->getUuidString());
     }
 }

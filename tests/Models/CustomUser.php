@@ -9,18 +9,22 @@
  * with this source code in the file LICENSE.
  */
 
-namespace YourAppRocks\EloquentUuid\Tests\Fixtures;
+namespace YourAppRocks\EloquentUuid\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use YourAppRocks\EloquentUuid\Traits\HasUuid;
 
-class Post extends Model
+class CustomUser extends Model
 {
     use HasUuid;
-    
-    protected $fillable = [
-        'title',
-    ];
 
-    protected $uuidColumnName = 'universally_unique_id';
+    protected $table = 'custom_users';
+
+    protected $uuidColumnName = 'userid';
+    protected $uuidVersion = 3;    // Available 1,3,4 or 5
+    protected $uuidString = 'your-app-rocks';   // Needed when $uuidVersion is "3 or 5"
+
+    protected $fillable = [
+        'name',
+    ];
 }

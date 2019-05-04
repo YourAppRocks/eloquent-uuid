@@ -11,7 +11,6 @@
 
 namespace YourAppRocks\EloquentUuid\Traits;
 
-use InvalidArgumentException;
 use Ramsey\Uuid\Uuid as RamseyUuid;
 use YourAppRocks\EloquentUuid\Exceptions\InvalidUuidVersionException;
 
