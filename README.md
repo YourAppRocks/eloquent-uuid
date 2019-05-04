@@ -36,7 +36,7 @@ or via `composer.json` file
 ```json
 {
     "require": {
-        "your-app-rocks/eloquent-uuid": "~1.2"
+        "your-app-rocks/eloquent-uuid": "~2"
     }
 }
 ```
@@ -97,7 +97,7 @@ class UserController extends Controller
 
     /**
      * Get User by custom 'UUID' key name - Implicit Binding.
-     * See https://laravel.com/docs/5.6/routing#route-model-binding
+     * See https://laravel.com/docs/5.8/routing#route-model-binding
      *
      * @param User $user
      * @return void
@@ -154,14 +154,11 @@ You can use trait ``Uuidable`` to create your own trait with your custom code.
 #### YourAppRocks\EloquentUuid\Traits\Uuidable;
 
 - getUuidColumnName()        ``// Get the column name. ( default 'uuid' )``
-- setUuidColumnName($name)   ``// Set the custom column name.``
 - getUuid()                  ``// Get the uuid value.``
 - setUuid($value)            ``// Set the uuid value.``
 - generateUuid()             ``// Generate the UUID value. ( Using Ramsey\Uuid )``
 - getUuidVersion()           ``// Get uuid version or default to 4.``
-- setUuidVersion($value)     ``// Set uuid version.``
 - getUuidString()            ``// Get string to generate uuid version 3 and 5.``
-- setUuidString($value = '') ``// Set string to generate uuid version 3 and 5.``
 
 ### Example custom code
 
