@@ -9,13 +9,16 @@
  * with this source code in the file LICENSE.
  */
 
-namespace YourAppRocks\EloquentUuid\Tests\Fixtures;
+namespace YourAppRocks\EloquentUuid\Tests\Models;
 
-class Post extends TestModel
+use Illuminate\Database\Eloquent\Model;
+use YourAppRocks\EloquentUuid\Traits\HasUuid;
+
+class User extends Model
 {
-    protected $fillable = [
-        'title',
-    ];
+    use HasUuid;
 
-    protected $uuidColumnName = 'universally_unique_id';
+    protected $fillable = [
+        'name',
+    ];
 }

@@ -11,33 +11,11 @@
 
 namespace YourAppRocks\EloquentUuid\Traits;
 
-use InvalidArgumentException;
 use Ramsey\Uuid\Uuid as RamseyUuid;
 use YourAppRocks\EloquentUuid\Exceptions\InvalidUuidVersionException;
 
 trait Uuidable
 {
-    /**
-     * The column name of the "uuid".
-     *
-     * @var string
-     */
-    protected $uuidColumnName = 'uuid';
-
-    /**
-     * The "uuid" version generate.
-     *
-     * @var int
-     */
-    protected $uuidVersion = 4;
-
-    /**
-     * The string to generate "uuid" version 3 and 5.
-     *
-     * @var string
-     */
-    protected $uuidString = '';
-
     /**
      * Get the column name for the "uuid".
      *
@@ -45,18 +23,27 @@ trait Uuidable
      */
     public function getUuidColumnName()
     {
-        return $this->uuidColumnName;
+        return property_exists($this, 'uuidColumnName') ? $this->uuidColumnName : 'uuid';
     }
 
     /**
-     * Set the column name for the "uuid".
+     * Get "uuid" version or default to 4.
      *
-     * @param string
+     * @return int
+     */
+    public function getUuidVersion()
+    {
+        return property_exists($this, 'uuidVersion') ? $this->uuidVersion : 4;
+    }
+
+    /**
+     * Get string to generate uuid version 3 and 5.
+     *
      * @return string
      */
-    public function setUuidColumnName($name)
+    public function getUuidString()
     {
-        $this->uuidColumnName = $name;
+        return property_exists($this, 'uuidString') ? $this->uuidString : '';
     }
 
     /**
@@ -88,6 +75,7 @@ trait Uuidable
      * Generate the UUID.
      *
      * @return string
+     * @throws InvalidUuidVersionException
      */
     public function generateUuid()
     {
@@ -101,62 +89,20 @@ trait Uuidable
             case 5:
                 return RamseyUuid::uuid5(RamseyUuid::NAMESPACE_DNS, $this->getUuidString())->toString();
             default:
-                throw new InvalidArgumentException;
+                throw new InvalidUuidVersionException;
         }
     }
 
     /**
-     * Get "uuid" version or default to 4.
-     *
-     * @return int
-     */
-    public function getUuidVersion()
-    {
-        return $this->uuidVersion ?: 4;
-    }
-
-    /**
-     * Set "uuid" version.
-     *
-     * @return int
-     */
-    public function setUuidVersion($value)
-    {
-        $this->validateUuidVersion($value);
-
-        $this->uuidVersion = $value;
-    }
-
-    /**
-     * Get string to generate uuid version 3 and 5.
-     *
-     * @return string
-     */
-    public function getUuidString()
-    {
-        return $this->uuidString ?: '';
-    }
-
-    /**
-     * Set string to generate uuid version 3 and 5.
-     *
-     * @return string
-     */
-    protected function setUuidString($value = '')
-    {
-        return $this->uuidString = $value;
-    }
-
-    /**
-     * Validate set uuid version.
+     * Validate uuid version.
      *
      * @throws InvalidUuidVersionException
      */
-    private function validateUuidVersion($value)
+    public function validateUuidVersion($value)
     {
         $validValues = [1, 3, 4, 5];
 
-        if (! in_array($value, $validValues) or ! is_numeric($value)) {
+        if (! in_array($value, $validValues)) {
             throw new InvalidUuidVersionException();
         }
     }

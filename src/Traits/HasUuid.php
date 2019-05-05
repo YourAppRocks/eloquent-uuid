@@ -11,6 +11,8 @@
 
 namespace YourAppRocks\EloquentUuid\Traits;
 
+use Ramsey\Uuid\Uuid as RamseyUuid;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use YourAppRocks\EloquentUuid\Exceptions\MissingUuidColumnException;
 
@@ -80,7 +82,7 @@ trait HasUuid
      */
     private function hasColumnUuid($model)
     {
-        if (! \Schema::hasColumn($model->getTable(), $model->getUuidColumnName())) {
+        if (! Schema::hasColumn($model->getTable(), $model->getUuidColumnName())) {
             throw new MissingUuidColumnException("You don't have a '{$model->getUuidColumnName()}' column on '{$model->getTable()}' table.");
         }
     }
@@ -95,7 +97,7 @@ trait HasUuid
      */
     private function validateUuid($uuid)
     {
-        if (! \Ramsey\Uuid\Uuid::isValid($uuid)) {
+        if (! RamseyUuid::isValid($uuid)) {
             throw (new ModelNotFoundException)->setModel(get_class($this));
         }
     }
