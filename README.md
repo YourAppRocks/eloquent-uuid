@@ -159,6 +159,7 @@ You can use trait ``Uuidable`` to create your own trait with your custom code.
 - generateUuid()             ``// Generate the UUID value. ( Using Ramsey\Uuid )``
 - getUuidVersion()           ``// Get uuid version or default to 4.``
 - getUuidString()            ``// Get string to generate uuid version 3 and 5.``
+- validateUuidVersion()      ``// Validate uuid version.``
 
 ### Example custom code
 
