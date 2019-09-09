@@ -21,8 +21,8 @@
         "ramsey/uuid": "^3.8"
     },
     "require-dev": {
-        "orchestra/testbench": ">=3.5 <3.8",
-        "phpunit/phpunit": "^6.0|^7.0|^8.0",
+        "orchestra/testbench": "^3.5|^4.0",
+        "phpunit/phpunit": "^7.0|^8.0",
         "friendsofphp/php-cs-fixer": "^2.14"
     },
     "autoload": {
