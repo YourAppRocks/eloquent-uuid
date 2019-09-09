@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [2.0.1] - 2019-09-08
+### Updated
+
+- Update `TestCase.php`: The `setUp()` method now return void type.
+- Update require-dev constraints:
+    - Drop `phpunit/phpunit` **^6.0** (Support only PHP <7.0)
+    - Add `orchestra/testbench` **^4.0** (Required to run tests against Laravel ^6.0)
+- Fix php files permission.
+
 ## [2.0] - 2019-05-05
 ### Updated
 
@@ -43,8 +52,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - First Release
 
-[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.0...HEAD
+[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.0.1...HEAD
 
+[2.0.1]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.0.1...2.0
 [2.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.2...2.0
 [1.2.2]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.0...1.2.1
