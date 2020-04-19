@@ -16,6 +16,9 @@ matrix:
     - php: 7.3
     - php: 7.3
       env: setup=lowest
+    - php: 7.4
+    - php: 7.4
+      env: setup=lowest
 
 sudo: false
 
@@ -33,5 +36,4 @@ install:
 
 script:
   - composer validate --strict --no-check-lock
-  - ./vendor/bin/php-cs-fixer fix . -v --dry-run --using-cache=no
   - ./vendor/bin/phpunit
