@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [2.1.0] - 2020-04-19
+### Updated
+
+- Bump `ramsey/uuid` **^3.9**
+- Tests against PHP 7.4
+- Update require-dev constraints:
+    - Add `orchestra/testbench` **^5.0** (Required to run tests against Laravel ^7.0)
+    - Add `phpunit/phpunit` **^9.0**
+
+### Removed
+
+- Remove 'check-style' script in `.travis.yml` file
+
 ## [2.0.1] - 2019-09-08
 ### Updated
 
@@ -52,8 +65,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - First Release
 
-[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.0.1...HEAD
+[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.1.0...HEAD
 
+[2.1.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.1.0...2.0.1
 [2.0.1]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.0.1...2.0
 [2.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.2...2.0
 [1.2.2]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.1...1.2.2
