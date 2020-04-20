@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [2.2.0] - 2020-04-20
+### Updated
+
+- Fixing "Laravel 7 : composer don't allow install" ([#5](https://github.com/YourAppRocks/eloquent-uuid/issues/5))
+- Bump `ramsey/uuid` **^4.0**
+
 ## [2.1.0] - 2020-04-19
 ### Updated
 
@@ -65,8 +71,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - First Release
 
-[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.1.0...HEAD
+[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.2.0...HEAD
 
+[2.2.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.2.0...2.1.0
 [2.1.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.1.0...2.0.1
 [2.0.1]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.0.1...2.0
 [2.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/1.2.2...2.0
