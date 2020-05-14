@@ -11,9 +11,9 @@
 
 namespace YourAppRocks\EloquentUuid\Traits;
 
-use Ramsey\Uuid\Uuid as RamseyUuid;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\Schema;
+use Ramsey\Uuid\Uuid as RamseyUuid;
 use YourAppRocks\EloquentUuid\Exceptions\MissingUuidColumnException;
 
 trait HasUuid

@@ -11,8 +11,8 @@
 
 namespace YourAppRocks\EloquentUuid\Test\Feature;
 
-use YourAppRocks\EloquentUuid\Tests\TestCase;
 use YourAppRocks\EloquentUuid\Tests\Models\User;
+use YourAppRocks\EloquentUuid\Tests\TestCase;
 
 class HasUuidTest extends TestCase
 {
