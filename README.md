@@ -48,6 +48,8 @@ or via `composer.json` file
 Create your table with a `uuid` column. For example:
 
 ```php
+<?php
+
 Schema::create('users', function (Blueprint $table) {
     $table->uuid('uuid');
     $table->string('name');
@@ -126,6 +128,8 @@ class UserController extends Controller
 You can easily config the package for your needs by changing the *column name* and *uuid version*. For example:
 
 ```php
+<?php
+
 //Create table
 Schema::create('posts', function (Blueprint $table) {
     $table->uuid('universally_unique_id');
@@ -167,6 +171,8 @@ Replacing trait ``HasUuid`` for ``MyUuidTrait``:
 
 
 ```php
+<?php
+
 //Create table
 Schema::create('users', function (Blueprint $table) {
     $table->uuid('uuid');
