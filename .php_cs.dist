@@ -98,7 +98,7 @@ return PhpCsFixer\Config::create()
         'object_operator_without_whitespace' => true,
         'ordered_imports' =>
             [
-            'sortAlgorithm' => 'length',
+            'sortAlgorithm' => 'alpha',
         ],
         'phpdoc_indent' => true,
         'phpdoc_inline_tag' => true,
