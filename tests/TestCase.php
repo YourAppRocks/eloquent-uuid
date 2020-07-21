@@ -31,6 +31,13 @@ class TestCase extends Orchestra
             'database' => ':memory:',
             'prefix' => '',
         ]);
+
+        $app['config']->set('database.other-connection', 'sqlite');
+        $app['config']->set('database.connections.other-connection', [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'prefix' => '',
+        ]);
     }
 
     protected function setUpDatabase()
@@ -45,6 +52,13 @@ class TestCase extends Orchestra
         Schema::dropIfExists('custom_users');
         Schema::create('custom_users', function (Blueprint $table) {
             $table->uuid('userid');
+            $table->string('name')->nullable();
+            $table->timestamps();
+        });
+
+        Schema::connection('other-connection')->dropIfExists('other_connection_users');
+        Schema::connection('other-connection')->create('other_connection_users', function ($table) {
+            $table->uuid('uuid');
             $table->string('name')->nullable();
             $table->timestamps();
         });
