@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [2.4.0] - 2020-09-08
+### Updated
+
+- Update require-dev constraints:
+    - Add `orchestra/testbench` **^6.0** (Required to run tests against Laravel ^8.0)
+- Update .gitignore
+
 ## [2.3.0] - 2020-07-24
 ### Added
 
@@ -76,8 +83,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - First Release
 
-[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.3.0...HEAD
+[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.4.0...HEAD
 
+[2.4.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.4.0...2.3.0
 [2.3.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.3.0...2.2.0
 [2.2.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.2.0...2.1.0
 [2.1.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.1.0...2.0.1
