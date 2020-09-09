@@ -1,4 +1,5 @@
 .idea
+.phpunit.result.cache
 .vscode
 composer.lock
 phpunit.xml
