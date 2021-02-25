@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [2.5.0] - 2021-02-24
+### Updated
+
+- Add support PHP 8 | Fixing "Update for php 8" ([#9](https://github.com/YourAppRocks/eloquent-uuid/issues/9))
+- Tests against PHP 8
+
 ## [2.4.0] - 2020-09-08
 ### Updated
 
@@ -83,8 +89,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - First Release
 
-[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.4.0...HEAD
+[Unreleased]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.5.0...HEAD
 
+[2.5.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.5.0...2.4.0
 [2.4.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.4.0...2.3.0
 [2.3.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.3.0...2.2.0
 [2.2.0]: https://github.com/YourAppRocks/eloquent-uuid/compare/2.2.0...2.1.0
